@@ -1,8 +1,5 @@
 # Chatbot Starter #
 
-## About ##
-
-Frontend starter repository for HW 1 of the ECE 528 (Cloud Computing) class at University of Michigan-Dearborn.
 
 ## Usage ##
 
