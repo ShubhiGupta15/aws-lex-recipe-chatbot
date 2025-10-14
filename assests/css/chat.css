@@ -1,0 +1,219 @@
+/* Chat Container */
+.chat {
+  width: 100%;
+  height: 60vh;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #b3e5fc;
+  border-radius: 15px;
+  background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.25), 0 4px 12px rgba(0, 0, 0, 0.1); /* light blue glow + soft shadow */
+  overflow: hidden;
+}
+
+
+/* Messages container */
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Messages content */
+.messages .messages-content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* spacing between messages */
+}
+
+/* Message wrapper: allows proper left/right alignment */
+.messages .message-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+/* Bot messages - left */
+.messages .bot-message-wrapper {
+  justify-content: flex-start; /* left side */
+}
+
+/* User messages - right */
+.messages .user-message-wrapper {
+  justify-content: flex-end; /* right side */
+}
+
+/* Individual message bubbles */
+.messages .message {
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  border-radius: 15px;
+  max-width: 75%;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Bot message bubble */
+.messages .bot-message {
+  background-color: #e0e0e0;
+  color: #000;
+  border-radius: 15px 15px 15px 0;
+}
+
+/* User message bubble */
+.messages .message-personal {
+  background-color: #0b93f6;
+  color: #fff;
+  border-radius: 15px 15px 0 15px;
+}
+
+/* Input box */
+.message-box {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 15px 15px;
+}
+
+.message-box .message-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  height: 36px;
+}
+
+.message-box .message-submit {
+  margin-left: 10px;
+  padding: 0 15px;
+  height: 36px;
+  background: #0b93f6;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.message-box .message-submit:hover {
+  background: #0077cc;
+}
+
+/* Scrollbar */
+.messages .messages-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages .messages-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.chat-window {
+  border: 1px solid rgba(0, 170, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.1);
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fefefe, #f4faff);
+}
+
+.user-message:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+input[type="text"] {
+  border-radius: 30px;
+  border: 1px solid #b3e5fc;
+  padding: 12px 18px;
+  font-size: 15px;
+  box-shadow: inset 0 0 6px rgba(0, 170, 255, 0.2);
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === CHAT HEADER === */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 10px 16px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.bot-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.bot-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.bot-status {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #d4fcdc;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  margin-right: 6px;
+  box-shadow: 0 0 6px rgba(0,255,0,0.8);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Menu dots on right side */
+.chat-header-right {
+  display: flex;
+  gap: 4px;
+}
+
+.menu-dot {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.7; }
+}
+
