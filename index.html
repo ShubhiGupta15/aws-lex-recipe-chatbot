@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Chatbot Concierge built on AWS Lex">
+    <meta name="author" content="Shubhi Gupta">
+
+    <title>QuickCook Assistant 🧑‍🍳🍽️</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/cover.css" rel="stylesheet">
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <link href="./assets/css/chat.css" rel="stylesheet">
+
+    <!-- AWS SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1196.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="site-wrapper white">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner text-center"> <!-- add text-center -->
+              <h3 class="masthead-brand">DishDash Helper 🧑‍🍳🍽️</h3>
+  </div>
+</div>
+          <div class="inner cover">
+            <div class="chat">
+                <div class="chat-header">
+                <div class="chat-header-left">
+                  <img src="bot.png" alt="Bot Avatar" class="bot-avatar">
+                  <div class="bot-info">
+                    <div class="bot-name">YumAI</div>
+                    <div class="bot-status">
+                      <span class="status-dot"></span> Online Now
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-header-right">
+                  <span class="menu-dot"></span>
+                  <span class="menu-dot"></span>
+                  <span class="menu-dot"></span>
+                </div>
+              </div>
+              <div class="messages">
+                <div class="messages-content"></div>
+              </div>
+
+            
+
+
+              <div class="message-box">
+                <textarea type="text" class="message-input" placeholder="Type a message..."></textarea>
+                <button class="message-submit btn btn-primary">Send</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery + Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- Scrollbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Chat JS -->
+    <script src="./assets/js/chat.js"></script>
+  </body>
+</html>
