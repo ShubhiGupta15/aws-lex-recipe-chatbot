@@ -70,3 +70,8 @@ This project was built as part of an AWS-based chatbot assignment, demonstrating
 
 ------------------------------------------------------------
 
+Demo Screenshot
+
+<img width="646" height="565" alt="image" src="https://github.com/user-attachments/assets/379bd404-479a-4c54-81b1-f7d1942ed236" />
+
+
